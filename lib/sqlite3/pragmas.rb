@@ -209,6 +209,10 @@ module SQLite3
       get_query_pragma "index_info", index, &block
     end
 
+    def encoding( &block ) # :yields: row
+      get_query_pragma "encoding", &block
+    end
+
     def index_list( table, &block ) # :yields: row
       get_query_pragma "index_list", table, &block
     end
